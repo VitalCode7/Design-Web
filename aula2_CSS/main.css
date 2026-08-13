@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Boa prática: impede que padding/borders afetem a largura total dos elementos */
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem; /* Ajustado para um tamanho padrão legível */
+}
+
+header, footer {
+    background-color: brown;
+    text-align: center;
+    padding: 2rem;
+    color: rgb(255, 255, 255);
+}
+
+nav ol {
+    display: flex;
+    justify-content: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a {
+    background-color: rgb(235, 134, 134);
+    padding: 1rem;
+    width: 20rem;
+    margin: 1rem;
+    display: inline-block;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+/* Corrigido o seletor com espaço entre 'li' e 'a' */
+nav li a:hover {
+    background-color: black;
+}
+
+main {
+    max-width: 70rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section {
+    width: 27rem;
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1rem;
+}
