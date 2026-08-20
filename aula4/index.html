@@ -66,8 +66,29 @@
                 -->
             </label>
         </fieldset>
+        
+        <label for="idade">
+            Idade:
+            <input type="number" id="idade" name="idade" max="10" min="3">
+        </label> <br>
+        <label for="cidade">
+            Cidade:
+            <input type="text" id="cidade" list="cidade">
+        </label>
+        <!-- 
+            datalist é um componente similar ao combobox (select)
+            a diferença é que permite que o usuario digite ou selecione uma opção
+            se relaciona com o input através do atributo list
+            -->
+        <datalist id="cidade">
+            <option value="Recife">
+            <option value="Natal">
+            <option value="João Pessoa">
+            <option value="Fortaleza">
+        </datalist>
 
-        <br>
+        <input type="hidden" id="id" name="id" value="777">
+
         <input type="submit" value="ENVIAR">
     </form>
 </body>
