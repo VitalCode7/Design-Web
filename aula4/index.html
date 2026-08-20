@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADASTRO DE CURRÍCULO</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <form action="">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required> <br>
+
+        <p>Qual sua área?</p>
+
+        <label>
+            <input type="checkbox" name="area" id="design" value="design">
+            <!-- 
+                - não é necessario colocar o for na label quando o input esta dentro
+                - o atributo de name representa o grupo
+                - o atributo de value precisa ser definido e recebe o valor
+                (é como se fosse o valor digitado em um campo de texto)
+            -->
+            Design
+        </label> <br>
+
+        <label>
+            <input type="checkbox" name="area" id="prog" value="prog">
+            Programação
+        </label> <br>
+
+        <label>
+            <input type="checkbox" name="area" id="redes" value="redes">
+            Redes
+        </label> <br>
+
+        <p>
+            <label>
+                <input type="radio" name="curso" value="infoweb">
+                <!-- 
+                    assim como no checkbox, o radio também tem que colocar 'value' e 'name'
+                -->
+                INFOWEB
+            </label><br>
+            <label>
+                <input type="radio" name="curso" value="adm">
+                ADM
+            </label><br>
+            <label>
+                <input type="radio" name="curso" value="msi">
+                Manutenção e Suporte
+            </label><br>
+        </p>
+
+        <fieldset>
+            <!-- fieldset é um componente opcional e usado para organizar o formulario visualmente -->
+            <legend>MENSAGEM</legend>
+            <label for="mensagem">
+                Mensagem: <br>
+                <textarea id="mensagem" name="msn" rows="10" cols="30"></textarea>
+                <!-- 
+                - essa marcação tem uma abertura e fechamento porque permite um texto longo com "enter"s 
+                - os atributos de formatação cols e rows são permitidos, mesmo sendo de formatação 
+                - difere do input do text porque aceita texto longo
+                - o 'value' é o texto dentro da marcação
+                -->
+            </label>
+        </fieldset>
+
+        <br>
+        <input type="submit" value="ENVIAR">
+    </form>
+</body>
+</html>
