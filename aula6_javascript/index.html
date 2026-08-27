@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //alert('Janela');
+        //window.confirm("pergunta com True ou False");
+        //window.prompt("pergunta subjetiva")
+        document.write("possibilidade de escrever no html - não é elegante.");
+        //pode-se colocar o conteúdo usando getElementById (por exemplo)
+        
+        /*OPERADORES ARITMÉTICOS*/
+        console.log(54+98); //é uma estratégia escondida para fazer testes - 
+        // deve ser acessado usando a aba 'console' do inspecionar do navegador
+        console.log(87-98);
+        console.log(2*89);
+        console.log(63/9);
+        let a = 8;
+        console.log("COMANDO a++"); //incrementar a+=1
+        console.log(a++); // incrementa depois de escrever    
+        console.log("Valor de 'a': "); //posso usar aspas simples
+        console.log(a);        
+        console.log('Comando ++a');        
+        console.log(++a); //incrementa antes de escrever        
+        console.log(a);
+
+        console.log(--a);
+        console.log(a--);
+
+        //OPERADORES RELACIONAIS
+
+        console.log(4==6);
+        console.log(4!=9);
+        console.log(9>=7);
+        console.log(6<6);
+        console.log(4==7 && 8==9); // ambas verdadeiras - retorna V. && = and em python
+        //console.log(4==8 || 0=0); // se alguma for verdadeira - retorna V. || = or em python
+
+        console.log(8==="8"); // se idênticos, INCLUSIVE NO TIPO, retorna v
+        console.log(8=="8");
+    </script>
+    <h2>ESTRUTURA CONDICIONAL</h2>
+    <script>
+        let lanche = 'bolo';
+        if(lanche == 'bolo'){
+            console.log("OPA! BOLO!!");
+        }else{
+            console.log("Hoje não é bolo... :(")
+        }
+        //IF's aninhado
+
+        if(lanche == 'cuscuz'){
+            console.log('CUSCUZ HOJE');
+        }else
+            if(lanche == 'bolacha'){
+                console.log("bolacha!")
+            }
+
+        //switch
+        let opcao = 2
+        switch(opcao){
+            case 1: console.log("valor é 1"); break;
+            case 2: console.log("valor é 2"); break;
+            case 3: console.log("valor é 3"); break;
+            default: console.log("default");
+        }
+        let esporte = "futebol"
+        switch(esporte){
+            case "basquete": {
+                console.log("valor é basquete"); break; //break é para parar o switch, ele não vai analisar as outras opções
+        }   //caso hajam várias linhas é necessário ter chaves
+            case "futebol": console.log("valor é futebol"); break;
+            case "handebol": console.log("valor é handebol"); break;
+            default: console.log("default");
+        }
+    </script>
+    <button id="incrementar">INCREMENTAR</button>
+    <!-- a marcação é similar ao input do tipo submit, mas o submit é com a marcação de form,
+     já o button é mais para interatividade com javascript -->
+    <button id="decrementar">decrementar</button>
+     <span id="resultado">0</span>
+     <!-- span é uma marcação sem valor semântico, mas do tipo inline -->
+    <script>
+        const incrementar = document.getElementById("incrementar");
+        //const é uma possibilidade de criação de variavel que não irá mudar de valor
+        incrementar.addEventListener('click', function(e){
+            // evento click é chamado ao clicar no botão 'incrementar'
+            //alert('CLICOU!')
+            let resultado = document.getElementById("resultado");
+            resultado.innerHTML = parseInt(resultado.textContent) +1; //innerhtml é um método para inserir html ou texto
+        })  //parseInt converte para inteiro
+    </script>
+    <script>
+        const decrementar = document.getElementById("decrementar");
+        //const é uma possibilidade de criação de variavel que não irá mudar de valor
+        decrementar.addEventListener('click', function(e){
+            // evento click é chamado ao clicar no botão 'incrementar'
+            //alert('CLICOU!')
+            let resultado = document.getElementById("resultado");
+            resultado.innerHTML = parseInt(resultado.textContent) -1; //innerhtml é um método para inserir html ou texto
+        })  //parseInt converte para inteiro
+    </script>
+</body>
+</html>
