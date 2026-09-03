@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de Repetição</title>
+</head>
+<body>
+    <h1>ESTRUTURAS DE REPETIÇÃO</h1>
+    <p id="texto"></p>
+    <ol id="listadealunos"></ol>
+
+    <script>
+        const alunos = ['Carlos', 'Alcides', 'Bianca', 'Danúbia'];
+        // variável de lista de alunos
+        document.getElementById("texto").innerHTML = alunos.sort().join(" , ");
+        // imprimir chamando 2 métodos para lista: sort para ordenar e join para inserir caractere entre os itens 
+        
+        // for básico
+        for (let i = 0; i < 10; i++) {
+            // A estrutura de repetição 'for' recebe 3 parâmetros:
+            // 1° parâmetro: declaração/início
+            // 2° parâmetro: teste lógico
+            // 3º parâmetro: incremento
+            console.log(i);
+        }
+
+        // CORREÇÃO 1: Alterado i > 10 para i < 10 para que o loop seja executado
+        for (let i = 0; i < 10; i += 2) {
+            console.log("incremento de 2 em 2: " + i + "\n");
+        }
+
+        for (let i = 10; i > 0; i--) {
+            console.log("Decremento: " + i);
+        }
+
+        // forEach
+        alunos.forEach(item => {
+            // forEach é uma opção prática para percorrer e imprimir valores de uma lista
+            console.log(item);
+        });
+
+        // CORREÇÃO 2: Usado alunos.length no lugar do número fixo 3 para cobrir todos os alunos da lista
+        const listaHtml = document.getElementById("listadealunos");
+        for (let i = 0; i < alunos.length; i++) {
+            console.log(alunos[i]);
+
+            // Forma 1 (Concatenação tradicional):
+            // listaHtml.innerHTML += "<li>" + alunos[i] + "</li>";
+
+            // CORREÇÃO 3: Forma 2 corrigida utilizando Template String sem aspas/sinais de + extras dentro da string
+            listaHtml.innerHTML += `<li>${alunos[i]}</li>`;
+        }
+
+        // while
+        let i = 0;
+        while (i < 10) {
+            console.log(i);
+            i++; // incremento necessário para evitar loop infinito
+        }
+    </script>
+
+    <h2>EXEMPLOS</h2>
+    <p id="resultado"></p>
+
+    <script>
+        const resultado = document.getElementById("resultado");
+        for (let i = 0; i < 5; i++) {
+            // CORREÇÃO 4: Adicionada a unidade 'px' e calculado tamanho mínimo em pixel para que o CSS seja válido e o texto visível
+            resultado.innerHTML += `<span style='font-size: ${(i + 1) * 10}px;'>INFOWEB</span><br>`;
+        }
+    </script>
+
+    <button id ="mudarbg"> MUDAR BG</button>
+
+    <script>
+
+        const mudarbg = document.getElementById("mudarbg");
+        mudarbg.addEventListener("click", function (e){
+            document.body.style.backgroundColor = "blue";
+        })
+    </script>
+
+<!-- Na linha 63 -->
+</body>
+</html>
