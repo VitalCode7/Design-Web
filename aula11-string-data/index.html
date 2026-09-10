@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String e Data</title>
+</head>
+<body>
+    <script>
+        // estruturas de repetição
+        for(let i = 0; i <= 10; i++){
+            console.log(i);
+        }
+    </script>
+
+    <h1>String e Data</h1>
+    <h2>String</h2>
+
+    <script>
+        let nome = 'INFOWEB';
+        console.log("Comprimento da string: " + nome.length);
+        console.log("Posição do caracter da string: " + nome.charAt(3));
+        // Ajustado para 'INFO' em maiúsculas para funcionar
+        console.log("Substitui a string: " + nome.replace("INFO", "Informática para ")); 
+        console.log("Fatia a string: " + nome.slice(2, 4));
+        console.log("Coloca em minúsculas: " + nome.toLowerCase());
+        console.log("Coloca em maiúsculas: " + "ifrn".toUpperCase());
+        console.log("Concatena strings: " + nome.concat("IFRN"));
+    </script>
+
+    <h2>Exemplo</h2>
+    <p id="resultado"></p>
+
+    <script>
+        let nome2 = 'Design web';
+        // Ajustado para 'i < nome2.length' e concatenação do HTML corrigida
+        for(let i = 0; i < nome2.length; i++){
+            document.getElementById('resultado').innerHTML +=
+                '<span style="font-size:' + (i + 1) + 'rem">' +
+                nome2.charAt(i) +
+                '</span>';
+        }
+    </script>
+    <h2>DATA</h2>
+    <p id="data"></p>
+    <p id="segundos"></p>
+    <script>
+        p = document.getElementById("data")
+        const data = new Date();
+        //data baseada na data que está no computador do usuário
+
+        console.log("dia de hoje"+data.getDate());
+        console.log("mês atual: "+data.getMonth()); //o mês começa com 0
+        console.log("ano corrente: "+ data.getFullYear());
+
+        console.log("Hora: "+data.getHours());
+        console.log("Minutos: "+data.getMinutes());
+        console.log("Segundos: "+data.getSeconds());
+
+        function segundos(){
+            const segundos = new Date();
+            document.getElementById("segundos").innerHTML = segundos.getSeconds();
+        }
+        setInterval(segundos, 1000)
+        p.innerHTML = data.getDate() + '/0' + (data.getMonth() + 1) + '/' + data.getFullYear()
+    </script>
+</body>
+</html>
