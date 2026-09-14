@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade</title>
+</head>
+<body>
+    <h1>Atividade</h1>
+    <p>Q1</p>
+    <script>
+        const nums = []
+        for(let i = -10; i < 11; i++){
+            nums.push(i)
+        }
+    </script>
+
+    <p>Q2</p>
+    <script>
+        const cores = ["blue", "yellow", "black", "purple", "brown", "red", "green"]
+        const nm = "Abraao"
+        l = cores.length
+        for(let i = 0; i < l; i++){
+            console.log(`%c${nm}`, `color: ${cores[i]}`)
+        }
+    </script>
+
+    <p>Q3</p>
+    <script>
+        for(let i = 1; i < 6; i++){
+            console.log(`%c${i}`, `font-size: ${i}rem`)
+        }
+    </script>
+
+    <p>Q4</p>
+    <label>
+    Nome: <input type="text" id="nomeInput"> <br>
+    <button id="tamanhosdiferentes">Tamanhos diferentes</button>
+    <section id="textoFormatado"></section>
+</label>
+<script>
+    let Gerar = document.querySelector("#tamanhosdiferentes");
+
+    Gerar.addEventListener("click", function(e){
+        let nome = document.querySelector("#nomeInput").value;
+        let elementoTexto = document.querySelector("#textoFormatado");
+        
+        // Limpa o conteúdo anterior
+        elementoTexto.innerHTML = "";
+
+        // Gera o nome 5 vezes alterando apenas o tamanho da fonte
+        for (let i = 1; i <= 5; i++) {
+            elementoTexto.innerHTML += `<p style="font-size: ${i}rem; margin: 0;">${nome}</p>`;
+        }
+    });
+</script>
+
+<p>Q5</p>
+<button id="Aumentar">Aumentar Fonte (2rem)</button>
+<button id="Diminuir">Diminuir Fonte (0.5rem)</button>
+
+<p>Muda de tamanho</p>
+
+<script>
+    const Aumentar = document.querySelector("#Aumentar");
+    const Diminuir = document.querySelector("#Diminuir");
+
+    Aumentar.addEventListener("click", function() {
+        document.body.style.fontSize = "2rem";
+    });
+
+    Diminuir.addEventListener("click", function() {
+        document.body.style.fontSize = "0.5rem";
+    });
+</script>
+</body>
+</html>
