@@ -10,23 +10,41 @@
     <div id="app">
         <app-header></app-header>
         <main>
-            <h2>DASHBOARD ADMINISTRATIVO </h2>
-            
+            <h2>DASHBOARD ADMINISTRATIVO</h2>
+
             <fieldset class="adicionar">
                 <legend>Inserir lanche</legend>
-                <input type="text" placeholder="Novo lanche..." v-model='novoLancheInput'>
-                <button @click="'novoLanche()" class="add">Inserir</button>
+                <input type="text" placeholder="Novo lanche..." v-model="novoLancheInput">
+                <button @click="novoLanche" class="add">Inserir</button>
+                <button @click="excluirUltimoLanche" class="add">Excluir último lanche</button>
             </fieldset>
-            
+
+            <fieldset class="adicionar">
+                <legend>Inserir fruta</legend>
+                <input type="text" placeholder="Nova fruta..." v-model="novaFrutaInput">
+                <button @click="novaFruta" class="add">Inserir fruta</button>
+            </fieldset>
+
+            <h3>Lanches</h3>
             <ol>
-                <li class="lanche" v-for="lanche in lanches">
-                    {{lanche.descricao}}
+                <li class="lanche" v-for="(lanche, index) in lanches" :key="index">
+                    {{ lanche.descricao }}
+                    <button @click="editarLanche(index)">Editar</button>
+                    <button @click="excluirLanche(index)">Excluir</button>
+                </li>
+            </ol>
+
+            <h3>Frutas</h3>
+            <ol>
+                <li class="lanche" v-for="(fruta, index) in frutas" :key="index">
+                    {{ fruta.descricao }}
+                    <button @click="editarFruta(index)">Editar</button>
+                    <button @click="excluirFruta(index)">Excluir</button>
                 </li>
             </ol>
         </main>
-        
-        <app-footer></app-footer>
 
+        <app-footer></app-footer>
     </div>
 
 

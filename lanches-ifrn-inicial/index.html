@@ -20,12 +20,19 @@
                     class="lanche"
                     :class="{selecionado: lanche.ativo}"
                     @click="mudarAtivo(lanche)"> 
-                <!-- diretivos são atributos -->
                 {{lanche.descricao}}
                 {{lanche.ativo}}
                 
                 <img :src="'imagens/' + lanche.imagem" alt="Imagem do lanche" 
                     class="w-24">
+            </li>
+        </ol>
+
+        <h2>Frutas</h2>
+        <ol>
+            <li v-for="fruta in frutas" class="lanche">
+                {{ fruta.descricao }}
+                <img :src="'imagens/' + fruta.imagem" alt="Imagem da fruta" class="w-24">
             </li>
         </ol>
         </main>
