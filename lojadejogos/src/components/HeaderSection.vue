@@ -5,14 +5,14 @@
       <ol>
         <li><router-link to="/">Início</router-link></li>
         <li><router-link to="/jogos">Jogos</router-link></li>
+        <li><router-link to="/noticias">Notícias</router-link></li>
+        <li><router-link to="/promocoes">Promoções</router-link></li>
+        <li><router-link to="/sobre">Sobre</router-link></li>
         <li><router-link to="/contato">Contato</router-link></li>
       </ol>
     </nav>
   </header>
 </template>
 
-<script>
-export default {
-  name: 'HeaderSection'
-}
+<script setup>
 </script>
