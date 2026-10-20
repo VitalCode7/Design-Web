@@ -1,7 +1,7 @@
 <template>
   <article>
     <h2>Página inicial</h2>
-    <p>Bem-vindo à nossa Loja de Jogos!</p>
+    <p>Jogos muito bons aqui (:</p>
   </article>
 </template>
 
