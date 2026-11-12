@@ -23,7 +23,8 @@ import CardPadrao from '@/components/CardPadrao.vue';
   <div>
     <CardPadrao v-for="item in personagens"
     :key="item.id"
-    :name="item.name"
+    :titulo="item.name"
+    :imagem="item.image"
     />
   </div>
 </template>
